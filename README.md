@@ -4,6 +4,17 @@ Este projeto detecta vagas ocupadas e livres em um estacionamento usando visão 
 Você desenha as vagas uma única vez sobre uma imagem do vídeo e o sistema mostra, em tempo real,
 quantas estão ocupadas e quantas estão livres, além de gerar um vídeo com essas informações.
 
+## Prévia do resultado
+![Prévia do resultado (render)](testeT.png)
+
+O frame acima ilustra o overlay típico do sistema:
+- Polígonos das vagas: verde (livre) e vermelho (ocupada).
+- Bounding box com rótulo/confiança do YOLO (quando habilitadas).
+- Pontos verdes (checkpoints) dentro das caixas: usados para validar se o veículo está dentro de uma vaga (padrão: vaga “satisfeita” se atingir o limiar, ex.: 2 de 5 pontos dentro).
+- Painel no canto superior esquerdo com totais, contagem de ocupadas/livres e porcentagem ocupada.
+
+Observação: a imagem é um exemplo de demonstração; a aparência (cores e ritmo de exibição) pode variar conforme configurações e a nota em “Sobre os vídeos do repositório”.
+
 ### O que você precisa
 - Python 3.10 ou superior
 - Um vídeo em (por exemplo: `data/parking.mp4`)
