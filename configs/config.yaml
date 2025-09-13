@@ -1,0 +1,16 @@
+model:
+  weights: data/models/yolov8x.pt
+  conf_threshold: 0.2
+paths:
+  polygons: data/polygons.json
+  video: data/parking.mp4
+ui:
+  window_name: Estacionamento
+  show_boxes: false
+logic:
+  occupy_confirm_s: 3.0
+  free_confirm_s: 5.5
+render:
+  out: parking_overlay.mp4
+draw:
+  seek_s: 57.0
